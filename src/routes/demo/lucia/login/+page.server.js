@@ -61,7 +61,7 @@ export const actions = {
 			return fail(400, { message: 'Invalid username' });
 		}
 		if (!validatePassword(password)) {
-			return fail(400, { message: 'Invalid password' });
+			return fail(400, { message: 'Invalid password (min 6, max 255 characters)' });
 		}
 
 		const userId = generateUserId();
