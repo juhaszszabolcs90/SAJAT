@@ -6,15 +6,23 @@
 
 <h1>Login/Register</h1>
 <form method='post' action='?/login' use:enhance>
-	<label>
-		Username
+	<div class="ui input">
+		<div class="ui label">Felhasználónév</div>
 		<input name='username' />
-	</label>
-	<label>
-		Password
+	</div>
+	<div class="ui input">
+		<div class="ui label">Jelszó</div>
 		<input type='password' name='password' />
-	</label>
-	<button>Login</button>
-	<button formaction='?/register'>Register</button>
+	</div>
+	<button class="ui button">Login</button>
+	<button class="ui button" formaction='?/register'>Register</button>
 </form>
 <p style='color: red'>{form?.message ?? ''}</p>
+<style>
+	form {
+		display: inline-flex;
+		flex-direction: column;
+		gap: 1rem;
+		margin: auto;
+	}
+</style>
